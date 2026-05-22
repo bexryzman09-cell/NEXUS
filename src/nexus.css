@@ -4894,9 +4894,9 @@ pre,
     color: #ff4a5a;           /* Неоново-красный цвет под подсветку Тетриса */
     font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase; /* Все буквы заглавными (НАЗАД) */
+    text-transform:  uppercase; /* Все буквы заглавными (НАЗАД) */
     letter-spacing: 2px;       /* Красивый разряд между буквами */
-    
+      
     background-color: rgba(255, 74, 90, 0.03); /* Едва заметный красный фон */
     border: 1px solid rgba(255, 74, 90, 0.4);   /* Аккуратная полупрозрачная рамка */
     border-radius: 6px;        /* Скругление углов */

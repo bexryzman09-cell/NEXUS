@@ -15,7 +15,7 @@ export default function News() {
 
     useEffect(() => {
         if (openId !== null) {
-            document.addEventListener('keydown', handleKeyDown);
+            document.addEventListener('keydown', handleKeyDown); 
             document.body.style.overflow = 'hidden';
         }
         return () => {

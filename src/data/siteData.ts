@@ -34,8 +34,9 @@ export interface Student {
 
 export interface NewsItem {
     id: number;
-    featured?: boolean;
+    featured?: boolean; // знак ?, если поле необязательное
     imgClass: string;
+    imgSrc: string;     // <-- ДОБАВЬТЕ ЭТУ СТРОКУ
     categoryKey: string;
     date: string;
     titleKey: string;
@@ -80,7 +81,7 @@ export const students: Student[] = [
     { avatarClass: 'student-card__avatar--7', initials: 'БР', company: 'EPAM', nameKey: 'student7.name', courseKey: 'student7.course', quoteKey: 'student7.quote', salary: '$4 300 / мес' },
 ];
 
-    export const partners: string[] = ['Google', 'Yandex', 'Amazon', 'Meta', 'Tinkoff', 'EPAM', 'Uzum', 'Sber', 'Kaspersky', 'Wolt'];
+export const partners: string[] = ['Google', 'Yandex', 'Amazon', 'Meta', 'Tinkoff', 'EPAM', 'Uzum', 'Sber', 'Kaspersky', 'Wolt'];
 
 export const newsData: Record<number, {
     category: { ru: string; en: string; uz: string };
@@ -125,8 +126,33 @@ export const newsData: Record<number, {
 };
 
 export const newsCards: NewsItem[] = [
-    { id: 1, featured: true, imgClass: 'news-card__img--1', categoryKey: 'news.cat.event', date: '01 МАЯ 2026', titleKey: 'news1.title', excerptKey: 'news1.excerpt', linkKey: 'news.read' },
-    { id: 2, imgClass: 'news-card__img--2', categoryKey: 'news.cat.partner', date: '15 АПР 2026', titleKey: 'news2.title', linkKey: 'news.read' },
-    { id: 3, imgClass: 'news-card__img--3', categoryKey: 'news.cat.course', date: '03 АПР 2026', titleKey: 'news3.title', linkKey: 'news.read' },
+    {
+        id: 1,
+        featured: true,
+        imgClass: 'news-card__img--1',
+        imgSrc: 'public/hack.jpg', // Фото для первого элемента (hack)
+        categoryKey: 'news.cat.event',
+        date: '01 МАЯ 2026',
+        titleKey: 'news1.title',
+        excerptKey: 'news1.excerpt',
+        linkKey: 'news.read'
+    }, 
+    {
+        id: 2,
+        imgClass: 'news-card__img--2',
+        imgSrc: 'path/to/google.jpg', // Фото для второго элемента (google)
+        categoryKey: 'news.cat.partner',
+        date: '15 АПР 2026',
+        titleKey: 'news2.title',
+        linkKey: 'news.read'
+    },
+    {
+        id: 3,
+        imgClass: 'news-card__img--3',
+        imgSrc: 'path/to/llc.jpg', // Фото для третьего элемента (llc)
+        categoryKey: 'news.cat.course',
+        date: '03 АПР 2026',
+        titleKey: 'news3.title',
+        linkKey: 'news.read'
+    },
 ];
- 
