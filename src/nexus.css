@@ -4769,7 +4769,7 @@ pre,
     border: none !important;
     color: #7d8590 !important;
     cursor: pointer !important;
-    zIndex: 10 !important;
+    z-index: 10 !important;
 }
 
 /* 3. МЕДИА-ЗАПРОС ДЛЯ ПЛАНШЕТОВ И ЭКРАНОВ СРЕДНЕГО РАЗМЕРА */
